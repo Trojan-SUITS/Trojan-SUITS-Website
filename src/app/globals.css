@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  /* USC brand */
+  --usc-cardinal: #990000;
+  --usc-cardinal-bright: #c40000;
+  --usc-gold: #ffc72c;
+
+  /* deep space */
+  --space-black: #030509;
+  --space-navy: #070b14;
+  --space-panel: #0c1220;
+  --space-panel-light: #121a2c;
+  --space-border: #1e2740;
+  --space-border-bright: #2c3a5e;
+
+  /* HUD accent (NASA/JPL mission-control cyan) */
+  --hud-cyan: #4cd6ff;
+  --hud-cyan-dim: #2a8fb8;
+
+  --foreground: #e9ecf5;
+  --foreground-muted: #8b93a7;
+
+  --background: var(--space-black);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-cardinal: var(--usc-cardinal);
+  --color-cardinal-bright: var(--usc-cardinal-bright);
+  --color-gold: var(--usc-gold);
+
+  --color-space-black: var(--space-black);
+  --color-space-navy: var(--space-navy);
+  --color-space-panel: var(--space-panel);
+  --color-space-panel-light: var(--space-panel-light);
+  --color-space-border: var(--space-border);
+  --color-space-border-bright: var(--space-border-bright);
+
+  --color-hud-cyan: var(--hud-cyan);
+  --color-hud-cyan-dim: var(--hud-cyan-dim);
+
+  --font-display: var(--font-orbitron);
+  --font-hud: var(--font-rajdhani);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  border-color: var(--space-border);
+}
+
+html {
+  background: var(--background);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: var(--usc-cardinal);
+  color: white;
+}
+
+/* subtle HUD scanline / vignette overlay, sits above the starfield */
+.hud-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(76, 214, 255, 0.06), transparent 60%),
+    radial-gradient(ellipse at 50% 110%, rgba(153, 0, 0, 0.08), transparent 60%);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(76, 214, 255, 0.45);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(255, 199, 44, 0.35);
+}
+
+.panel-border {
+  border: 1px solid var(--space-border);
+  background: linear-gradient(180deg, var(--space-panel) 0%, var(--space-navy) 100%);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: var(--min-opacity, 0.2); }
+  50% { opacity: var(--max-opacity, 1); }
+}
