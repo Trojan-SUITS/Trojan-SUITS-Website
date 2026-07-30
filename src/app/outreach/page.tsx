@@ -24,29 +24,26 @@ export default function OutreachPage() {
         <SectionTitle>Our Mission</SectionTitle>
         <div className="space-y-4 text-lg leading-relaxed text-foreground-muted">
           <p>
-            NASA SUITS grades every team on a Community &amp; Industry
-            Engagement Plan worth 20 of the proposal's 100 points, our
-            outreach work is not an afterthought, it's core to the
-            mission. We plan and execute at least four documented engagement
-            events each year, with at least one community event and one
+            NASA SUITS grades every team on an Education/Community & Industry
+            Engagement Plan. We plan and execute at least four documented engagement
+            events each year, with at least one education/community event and one
             industry event.
           </p>
           <p>
             On the education side, that means presentations and workshops at
-            academic institutions, curriculum design, and library workshops
+            academic institutions, Maker Faire boothing, and library workshops
             aimed at getting K-12 and undergraduate students excited about
-            human spaceflight. On the industry side, it means company
-            tours, mentorship arrangements, and sponsor relationships with
-            organizations like Anduril, Aerospace Corporation, and Arkisys.
+            human spaceflight or mixed-reality technology. On the industry side, it means company
+            tours, design reviews, and mentorship sessions with industry leaders.
           </p>
           <p>
-            We also run the team's public presence: social media,
+            Our outreach team is also responsible for running social media,
             press outreach, video documentation, and this website, plus the
             point-of-view documentation that feeds our final video
             deliverable to NASA.
           </p>
           <p>
-            If you represent an industry partner, a government agency, or an
+            If you represent an company, a government agency, the press, or an
             academic institution and want to explore a connection:
             sponsorship, mentorship, a facility tour, a guest talk, or
             something else, we'd love to hear from you.
@@ -57,10 +54,6 @@ export default function OutreachPage() {
       <Section id="contact" className="pb-24">
         <Eyebrow>Get In Touch</Eyebrow>
         <SectionTitle>Contact Us</SectionTitle>
-        <p className="mb-8 max-w-2xl text-foreground-muted">
-          For industry, government agency, or academic connections. Any
-          email domain is welcome here.
-        </p>
         <a
           href={OUTREACH_FORM_URL}
           target="_blank"

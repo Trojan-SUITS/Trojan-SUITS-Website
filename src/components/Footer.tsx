@@ -35,6 +35,12 @@ export default function Footer() {
           <Link href="/info" className="hover:text-gold">
             Info
           </Link>
+          <Link href="/blog" className="hover:text-gold">
+            Blog
+          </Link>
+          <Link href="/legacy" className="hover:text-gold">
+            Legacy
+          </Link>
           <Link href="/roles" className="hover:text-gold">
             Roles
           </Link>

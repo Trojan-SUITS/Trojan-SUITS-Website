@@ -35,7 +35,7 @@ export const teams: Team[] = [
     slug: "ai",
     emoji: "🤖",
     name: "AI",
-    tagline: "Voice assistant and rover AI logic.",
+    tagline: "Voice assistant and utilization of AI.",
     description:
       "Researches, plans, and develops ways to utilize AI/LLMs into the project. Collaborates with HUD & Robotics teams.",
     specialties: [

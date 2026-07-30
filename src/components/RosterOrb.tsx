@@ -4,6 +4,7 @@ import { Globe, Link as LinkIcon } from "lucide-react";
 import { SiGithub, SiInstagram, SiX } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
 import type { RosterMember } from "@/data/roster";
+import { initials } from "@/lib/initials";
 
 const platformIcons: Record<string, ComponentType<{ className?: string }>> = {
   github: SiGithub,
@@ -13,17 +14,6 @@ const platformIcons: Record<string, ComponentType<{ className?: string }>> = {
   twitter: SiX,
   website: Globe,
 };
-
-function initials(name: string) {
-  return name
-    .replace(/^(Prof\.|Dr\.)\s*/i, "")
-    .split(" ")
-    .filter(Boolean)
-    .map((part) => part[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-}
 
 export default function RosterOrb({ member }: { member: RosterMember }) {
   return (

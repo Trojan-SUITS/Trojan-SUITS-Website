@@ -7,6 +7,8 @@ import { Menu, X, Rocket } from "lucide-react";
 
 const links = [
   { href: "/info", label: "Info" },
+  { href: "/blog", label: "Blog" },
+  { href: "/legacy", label: "Legacy" },
   { href: "/roles", label: "Roles" },
   { href: "/outreach", label: "Outreach" },
 ];
@@ -57,7 +59,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="ml-3 rounded border border-cardinal-bright bg-cardinal px-4 py-2 font-hud text-base uppercase tracking-wide text-white transition-colors hover:bg-cardinal-bright"
           >
-            Get Involved
+            Apply
           </a>
         </div>
 
@@ -94,7 +96,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="text-gold"
             >
-              Get Involved
+              Apply
             </a>
           </div>
         </div>
