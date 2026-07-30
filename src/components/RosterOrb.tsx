@@ -1,5 +1,18 @@
 import Image from "next/image";
+import type { ComponentType } from "react";
+import { Globe, Link as LinkIcon } from "lucide-react";
+import { SiGithub, SiInstagram, SiX } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6";
 import type { RosterMember } from "@/data/roster";
+
+const platformIcons: Record<string, ComponentType<{ className?: string }>> = {
+  github: SiGithub,
+  linkedin: FaLinkedin,
+  instagram: SiInstagram,
+  x: SiX,
+  twitter: SiX,
+  website: Globe,
+};
 
 function initials(name: string) {
   return name
@@ -23,6 +36,7 @@ export default function RosterOrb({ member }: { member: RosterMember }) {
               src={member.photo}
               alt={member.name}
               fill
+              sizes="112px"
               className="object-cover"
             />
           ) : (
@@ -32,12 +46,33 @@ export default function RosterOrb({ member }: { member: RosterMember }) {
           )}
         </div>
       </div>
-      <div>
-        <div className="font-hud text-lg text-foreground">{member.name}</div>
-        <div className="font-hud text-sm uppercase tracking-wide text-gold/80">
+      <div className="w-32">
+        <div className="font-hud text-lg text-foreground break-words">
+          {member.name}
+        </div>
+        <div className="font-hud text-sm uppercase tracking-wide text-gold/80 break-words">
           {member.role}
         </div>
       </div>
+      {member.links && member.links.length > 0 && (
+        <div className="flex items-center gap-3">
+          {member.links.map((link) => {
+            const Icon = platformIcons[link.platform.toLowerCase()] ?? LinkIcon;
+            return (
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${member.name} on ${link.platform}`}
+                className="text-foreground-muted transition-colors hover:text-gold"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

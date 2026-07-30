@@ -11,6 +11,8 @@ const links = [
   { href: "/outreach", label: "Outreach" },
 ];
 
+const STUDENT_APPLY_FORM_URL = "https://forms.gle/oybiiuuYPEdegsYTA";
+
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -49,12 +51,14 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <Link
-            href="/roles#open-role"
-            className="ml-3 rounded border border-cardinal-bright/60 bg-cardinal/20 px-4 py-2 font-hud text-base uppercase tracking-wide text-foreground transition-colors hover:bg-cardinal/40"
+          <a
+            href={STUDENT_APPLY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-3 rounded border border-cardinal-bright bg-cardinal px-4 py-2 font-hud text-base uppercase tracking-wide text-white transition-colors hover:bg-cardinal-bright"
           >
             Get Involved
-          </Link>
+          </a>
         </div>
 
         <button
@@ -83,13 +87,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/roles#open-role"
+            <a
+              href={STUDENT_APPLY_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="text-gold"
             >
               Get Involved
-            </Link>
+            </a>
           </div>
         </div>
       )}

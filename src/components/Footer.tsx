@@ -4,9 +4,32 @@ export default function Footer() {
   return (
     <footer className="border-t border-space-border bg-space-black/80">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-foreground-muted md:flex-row md:items-center md:justify-between">
-        <div className="font-hud tracking-wide">
-          <span className="text-foreground">Trojan SUITS 2027</span> · University
-          of Southern California · NASA SUITS Challenge
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-hud tracking-wide">
+          <span className="text-foreground">Trojan SUITS 2027</span>
+          <a
+            href="https://viterbischool.usc.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gold"
+          >
+            USC Viterbi
+          </a>
+          <a
+            href="https://www.isi.edu/centers-serc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gold"
+          >
+            SERC
+          </a>
+          <a
+            href="https://www.nasa.gov/learning-resources/spacesuit-user-interface-technologies-for-students/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gold"
+          >
+            NASA SUITS
+          </a>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           <Link href="/info" className="hover:text-gold">
@@ -18,17 +41,7 @@ export default function Footer() {
           <Link href="/outreach" className="hover:text-gold">
             Outreach
           </Link>
-          <a
-            href="mailto:limbrian@usc.edu"
-            className="hover:text-gold"
-          >
-            limbrian@usc.edu
-          </a>
         </div>
-      </div>
-      <div className="border-t border-space-border/60 px-6 py-4 text-center text-xs text-foreground-muted/70">
-        Advised by Prof. David Barnhart, USC Space Engineering Research Center
-        (SERC)
       </div>
     </footer>
   );

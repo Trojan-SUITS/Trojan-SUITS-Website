@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Section, Eyebrow, SectionTitle } from "@/components/Section";
 import TeamCard from "@/components/TeamCard";
-import { teams, advisorRole, openRole } from "@/data/teams";
+import {
+  teams,
+  facultyAdvisorRole,
+  industryAdvisorRole,
+  openRole,
+} from "@/data/teams";
 
 const STUDENT_APPLY_FORM_URL = "https://forms.gle/oybiiuuYPEdegsYTA";
 
@@ -22,6 +27,17 @@ export default function RolesPage() {
       </Section>
 
       <Section id="eligibility" className="panel-border rounded-lg">
+        <Eyebrow>Who We're Looking For</Eyebrow>
+        <p className="mb-6 text-lg leading-relaxed text-foreground-muted">
+          Along with utilizing CS/Game-Dev skills to build this HUD,
+          we're also seeking roboticists, scientists, and AI specialists
+          to build a mock rover, create an AI assistant, assess the
+          feasibility of bringing this technology into space, and might even
+          try building our own space helmet/HMD! Additionally, we'll
+          need education and business specialists to facilitate education &
+          industry outreach events.
+        </p>
+
         <SectionTitle>Eligibility</SectionTitle>
         <div className="space-y-3 text-foreground-muted">
           <p>
@@ -31,13 +47,11 @@ export default function RolesPage() {
             to submit interest.
           </p>
           <p>
-            <span className="text-foreground">
-              Advisor
-            </span>{" "}
-            roles are open to any staff member from USC.
+            Advisor roles are open to USC faculty, outside academics, and
+            industry professionals.
           </p>
           <p>
-            Don&apos;t see a specialty that matches you? Use the{" "}
+            Don't see a specialty that matches you? Use the{" "}
             <a href="#open-role" className="text-gold hover:underline">
               Open Role
             </a>{" "}
@@ -63,8 +77,17 @@ export default function RolesPage() {
       <Section>
         <Eyebrow>Advisors</Eyebrow>
         <SectionTitle>Faculty & Industry Advisors</SectionTitle>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <TeamCard {...advisorRole} accent="gold" />
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <TeamCard
+            {...facultyAdvisorRole}
+            accent="gold"
+            applyUrl={STUDENT_APPLY_FORM_URL}
+          />
+          <TeamCard
+            {...industryAdvisorRole}
+            accent="gold"
+            applyUrl="/outreach#contact"
+          />
         </div>
       </Section>
 

@@ -25,7 +25,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Trojan SUITS 2027 | USC NASA SUITS Team",
   description:
-    "USC's student team for NASA SUITS — building a mixed-reality heads-up display for astronauts. Now recruiting members, advisors, and outreach partners.",
+    "USC's student team for NASA SUITS: building a mixed-reality heads-up display for astronauts. Now recruiting members, advisors, and outreach partners.",
 };
 
 export default function RootLayout({

@@ -1,13 +1,19 @@
 import Link from "next/link";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Section, Eyebrow, SectionTitle } from "@/components/Section";
 import { teams } from "@/data/teams";
+import RosterOrb from "@/components/RosterOrb";
+import { roster } from "@/data/roster";
+
+const NASA_SUITS_URL =
+  "https://www.nasa.gov/learning-resources/spacesuit-user-interface-technologies-for-students/";
 
 const majors = [
-  "Computer Science (Games, AI)",
-  "Cinematic Arts / Game Design (IMGD)",
+  "Computer Science",
+  "Game Development",
   "Astronautical Engineering",
-  "Electrical & Computer Engineering",
+  "Electrical Engineering",
+  "Materials Science",
   "Psychology / Cognitive Science",
   "Design",
   "Journalism / Communications",
@@ -15,32 +21,22 @@ const majors = [
   "Mechanical / Systems Engineering",
 ];
 
-const gains = [
-  "Travel to NASA Johnson Space Center, Houston to demo live to NASA engineers (May 2027)",
-  "Real engineering credit — a working system submitted to and evaluated by NASA",
-  "Cross-disciplinary collaboration across Viterbi, Cinematic Arts, Annenberg, Marshall, Dornsife, and more",
-  "Co-authorship on a technical white paper submitted to NASA at challenge completion",
-  "Industry connections — mentorship from aerospace companies, AR/MR firms, and JPL",
-  "A portfolio-defining project — built for NASA, documented, and publicly presentable",
-];
-
 export default function Home() {
   return (
     <>
       <Section className="pt-20 md:pt-28">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cardinal-bright/50 bg-cardinal/15 px-4 py-1.5 font-hud text-sm uppercase tracking-wide text-foreground">
-          🚀 Now Recruiting — All USC disciplines welcome
+          🚀 Now Recruiting: All USC disciplines welcome
         </div>
         <h1 className="max-w-3xl font-display text-4xl leading-tight text-foreground text-glow-gold md:text-6xl">
           Trojan <span className="text-cardinal-bright">SUITS</span> 2027
         </h1>
         <p className="mt-4 max-w-2xl font-hud text-xl text-gold">
-          USC&apos;s Student Team for the NASA SUITS Challenge
+          USC's Student Team for the NASA SUITS Challenge
         </p>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground-muted">
-          We are building a real mixed-reality heads-up display for NASA
-          astronauts. If selected, we demo at NASA Johnson Space Center in
-          Houston in May 2027.
+          We are building a mixed reality interface to support astronauts and communicate with robots. 
+          If selected, we demo at NASA's Johnson Space Center in Houston.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-4">
@@ -61,19 +57,40 @@ export default function Home() {
 
       <Section className="panel-border rounded-lg">
         <Eyebrow>What is NASA SUITS?</Eyebrow>
-        <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
-          NASA SUITS (Spacesuit User Interface Technologies for Students) is
-          an annual national challenge where university teams design and
-          build mixed-reality interfaces for astronauts during spacewalks.
-          Teams are scored on technical excellence, human-in-the-loop
-          testing, and public outreach — then travel to NASA&apos;s Johnson
-          Space Center to demo their systems live to NASA engineers.
-        </p>
-        <p className="mt-4 flex items-center gap-2 text-foreground-muted">
-          <MapPin className="h-4 w-4 text-gold" />
-          USC fielded a team in 2022 that reached the top-10 finalist round.
-          We are reviving that effort with a more ambitious concept.
-        </p>
+        <div className="space-y-4">
+          <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
+            <a
+              href={NASA_SUITS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:underline"
+            >
+              NASA SUITS
+            </a>{" "}
+            (Spacesuit User Interface Technologies for Students) is
+            an annual national challenge where university teams design and
+            build mixed-reality interfaces for astronauts during spacewalks.
+            Teams are scored on technical excellence, human-in-the-loop
+            testing, and public outreach. 
+          </p>
+          <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
+            While the general idea is to design
+            a user interface for an augmented reality HMD, teams are expected
+            to put their own spin and this can range from developing an AI assistant
+            to utilizing third-party/in-house fabricated hardware.
+          </p>
+          <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
+            In addition to the technical side of the project, we're exptected to do
+            outreach events with educational institutions and industry to spread the word
+            about NASA's mission and learn how professionals are approaching these
+            same challenges.
+          </p>
+          <p className="flex items-center gap-2 text-foreground-muted">
+            <span className="text-gold">•</span>
+            USC fielded a team in 2022 that reached the top-10 finalist round.
+            We are reviving that effort with a more ambitious concept.
+          </p>
+        </div>
       </Section>
 
       <Section>
@@ -99,13 +116,11 @@ export default function Home() {
       </Section>
 
       <Section>
-        <Eyebrow>Who We&apos;re Looking For</Eyebrow>
-        <SectionTitle>Not a CS-only project</SectionTitle>
+        <Eyebrow>Who We're Looking For</Eyebrow>
         <p className="mb-6 max-w-3xl text-lg text-foreground-muted">
-          NASA scores us on human testing, design, and community engagement
-          — not just the code. We are actively recruiting across:
+          Some majors that would be a good fit for this project include but aren't limited to...
         </p>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-">
           {majors.map((major) => (
             <span
               key={major}
@@ -117,75 +132,29 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section>
-        <Eyebrow>What Students Gain</Eyebrow>
-        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {gains.map((gain) => (
-            <li
-              key={gain}
-              className="panel-border flex gap-3 rounded-lg p-4 text-foreground-muted"
-            >
-              <span className="text-gold">◆</span>
-              {gain}
-            </li>
-          ))}
-        </ul>
-      </Section>
-
-      <Section className="panel-border rounded-lg">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <Section id="roster">
+        <Eyebrow>Roster</Eyebrow>
+        <div className="space-y-10">
           <div>
-            <Eyebrow>Project Lead</Eyebrow>
-            <h3 className="mb-2 font-hud text-xl text-foreground">
-              Brian Lim
-            </h3>
-            <p className="text-foreground-muted">
-              Incoming M.S. Computer Science student at USC. Competed in and
-              led NASA SUITS teams from 2017–2019 at Riverside City College
-              and Norco College — experience that earned him two internships
-              at NASA JPL. He is reviving the USC SUITS effort at the
-              graduate level with a more ambitious technical concept.
-            </p>
+            <SectionTitle>Advisors</SectionTitle>
+            <div className="flex flex-wrap justify-center gap-10">
+              {roster
+                .filter((member) => member.tier === "advisor")
+                .map((member) => (
+                  <RosterOrb key={member.name} member={member} />
+                ))}
+            </div>
           </div>
           <div>
-            <Eyebrow>Faculty Advisor</Eyebrow>
-            <h3 className="mb-2 font-hud text-xl text-foreground">
-              Prof. David Barnhart
-            </h3>
-            <p className="text-foreground-muted">
-              Research Professor, Astronautical Engineering; Director, USC
-              Space Engineering Research Center (SERC). Co-advised the 2022
-              USC finalist team.{" "}
-              <a
-                href="mailto:barnhart@isi.edu"
-                className="text-gold hover:underline"
-              >
-                barnhart@isi.edu
-              </a>
-            </p>
+            <SectionTitle>Students</SectionTitle>
+            <div className="flex flex-wrap justify-center gap-10">
+              {roster
+                .filter((member) => member.tier === "student")
+                .map((member) => (
+                  <RosterOrb key={member.name} member={member} />
+                ))}
+            </div>
           </div>
-        </div>
-      </Section>
-
-      <Section className="text-center">
-        <SectionTitle>Interested? Get in touch.</SectionTitle>
-        <p className="mx-auto mb-8 max-w-xl text-foreground-muted">
-          All USC students welcome, open to all years and programs. Advisors,
-          industry, and academic partners — we&apos;d love to connect too.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link
-            href="/roles"
-            className="rounded border border-cardinal-bright bg-cardinal px-6 py-3 font-hud text-lg uppercase tracking-wide text-white hover:bg-cardinal-bright"
-          >
-            Browse Roles
-          </Link>
-          <Link
-            href="/outreach"
-            className="rounded border border-space-border-bright px-6 py-3 font-hud text-lg uppercase tracking-wide text-foreground hover:border-hud-cyan hover:text-gold"
-          >
-            Outreach & Partnerships
-          </Link>
         </div>
       </Section>
     </>

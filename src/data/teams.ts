@@ -72,7 +72,7 @@ export const teams: Team[] = [
     name: "Design",
     tagline: "Visual language for the HUD, props, and brand.",
     description:
-      "Constructs the design language across the HUD, physical props, team branding, and the website. Frees the development team to focus on technical scope; cross-team collaboration is expected. Mindful of human-factors — building UX that supports, not hinders, astronauts during missions.",
+      "Constructs the design language across the HUD, physical props, team branding, and the website. Frees the development team to focus on technical scope; cross-team collaboration is expected. Mindful of human-factors, building UX that supports, not hinders, astronauts during missions.",
     specialties: [
       "HUD visual language: information hierarchy, typography, color, legibility",
       "Robot / suit aesthetics",
@@ -153,19 +153,19 @@ export const teams: Team[] = [
       "Recruitment drive support",
     ],
     whoFitsHere:
-      "Organized communicators from any discipline — project management, business, or engineering backgrounds all fit",
+      "Organized communicators from any discipline: project management, business, or engineering backgrounds all fit",
     proposalSections: "Project Schedule (5 pts)",
     domainRestriction: "usc",
   },
 ];
 
-export const advisorRole = {
-  slug: "advisor",
+export const facultyAdvisorRole = {
+  slug: "faculty-advisor",
   emoji: "🎓",
-  name: "Faculty / Industry Advisor",
-  tagline: "Guide the team with domain expertise.",
+  name: "Faculty Advisor",
+  tagline: "Guide the team with academic and research expertise.",
   description:
-    "We're looking for additional faculty, research staff, and industry professionals to advise across our technical scopes — mixed reality, robotics, AI, human factors, and aerospace systems. Advisors can be USC faculty, outside academics, or industry professionals; any email domain is welcome.",
+    "We're looking for additional faculty and research staff to advise across our technical scopes: mixed reality, robotics, AI, human factors, and aerospace systems. Advisors can be USC faculty or outside academics; any email domain is welcome.",
   specialties: [
     "Mixed Reality / AR-VR",
     "Robotics & Autonomy",
@@ -174,7 +174,26 @@ export const advisorRole = {
     "Aerospace & EVA Systems",
   ],
   whoFitsHere:
-    "Faculty, research staff, and industry professionals willing to offer periodic mentorship, technical review, or connections",
+    "Faculty and research staff willing to offer periodic mentorship, technical review, or connections",
+  domainRestriction: "any" as DomainRestriction,
+};
+
+export const industryAdvisorRole = {
+  slug: "industry-advisor",
+  emoji: "🤝",
+  name: "Industry Advisor",
+  tagline: "Bring real-world engineering and industry perspective.",
+  description:
+    "We're looking for industry professionals to advise across our technical scopes: mixed reality, robotics, AI, human factors, and aerospace systems. Any email domain is welcome.",
+  specialties: [
+    "Mixed Reality / AR-VR",
+    "Robotics & Autonomy",
+    "AI / Machine Learning",
+    "Human Factors / HITL Research",
+    "Aerospace & EVA Systems",
+  ],
+  whoFitsHere:
+    "Industry professionals willing to offer periodic mentorship, technical review, or connections",
   domainRestriction: "any" as DomainRestriction,
 };
 
@@ -184,7 +203,7 @@ export const openRole = {
   name: "Open Role",
   tagline: "Not sure where you fit? Tell us anyway.",
   description:
-    "This is not a CS-only project — NASA scores us on human testing, design, and community engagement, not just code. If you think you can contribute but don't see a specialty above that matches you, tell us what you bring and we'll help find a place for you.",
+    "This is not a CS-only project: NASA scores us on human testing, design, and community engagement, not just code. If you think you can contribute but don't see a specialty above that matches you, tell us what you bring and we'll help find a place for you.",
   specialties: [],
   whoFitsHere: "Any USC student, any year, any program",
   domainRestriction: "usc" as DomainRestriction,
