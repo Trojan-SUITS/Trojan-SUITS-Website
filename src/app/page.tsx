@@ -57,7 +57,9 @@ export default function Home() {
       </Section>
 
       <Section className="panel-border rounded-lg">
-        <Eyebrow>What We're Building</Eyebrow>
+        <div className="-mt-6 md:-mt-8">
+          <Eyebrow>What We're Building</Eyebrow>
+        </div>
         <div className="space-y-4">
           <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
             Trojan SUITS is USC's student team for{" "}
@@ -97,8 +99,10 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="outreach" className="panel-border rounded-lg">
-        <Eyebrow>Community & Industry Engagement</Eyebrow>
+      <Section id="outreach" className="panel-border rounded-lg mt-8 md:mt-10">
+        <div className="-mt-6 md:-mt-8">
+          <Eyebrow>Community & Industry Engagement</Eyebrow>
+        </div>
         <div className="space-y-4 text-lg leading-relaxed text-foreground-muted">
           <p>
             NASA SUITS grades every team on an Education/Community & Industry
