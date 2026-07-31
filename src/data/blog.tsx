@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export type BlogPost = {
   id: string;
-  date: string;
+  date: string; // ISO format, e.g. "2026-07-30" — powers both the display date and the month grouping
   author: string; // must match a `name` in src/data/roster.ts
   content: ReactNode; // plain text, or full JSX: <img>, custom classNames, etc.
 };
@@ -10,7 +10,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     id: "2026-07-30-recruiting",
-    date: "July 30, 2026",
+    date: "2026-07-30",
     author: "Brian Lim",
     content: (
       <p>

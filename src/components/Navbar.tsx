@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Menu, X, Rocket } from "lucide-react";
 
 const links = [
-  { href: "/info", label: "Info" },
+  { href: "/timeline", label: "Timeline" },
   { href: "/blog", label: "Blog" },
   { href: "/legacy", label: "Legacy" },
   { href: "/roles", label: "Roles" },

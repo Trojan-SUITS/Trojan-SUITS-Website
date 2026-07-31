@@ -15,7 +15,7 @@ export default function LegacyPage() {
       <Section className="pt-16 md:pt-20">
         <Eyebrow>Legacy</Eyebrow>
         <h1 className="font-display text-3xl text-foreground md:text-5xl">
-          Our Legacy
+          USC Teams of the Past
         </h1>
       </Section>
 

@@ -32,8 +32,8 @@ export default function Footer() {
           </a>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <Link href="/info" className="hover:text-gold">
-            Info
+          <Link href="/timeline" className="hover:text-gold">
+            Timeline
           </Link>
           <Link href="/blog" className="hover:text-gold">
             Blog
