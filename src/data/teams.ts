@@ -131,7 +131,7 @@ export const teams: Team[] = [
       "The team's public presence and the graded engagement plan required by NASA. Plans at least 4 documented engagement events for the proposal (at least 1 community, at least 1 industry).",
     specialties: [
       "Education: presentations/workshops at academic institutions, curriculum design, library workshops",
-      "Industry connect: company tours, mentorship arrangements, sponsor relationships",
+      "Industry: company tours, mentorship arrangements, sponsor relationships",
       "Media: social media presence, press outreach, video documentation, website content",
     ],
     whoFitsHere:

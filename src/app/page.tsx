@@ -106,7 +106,7 @@ export default function Home() {
         <div className="space-y-4 text-lg leading-relaxed text-foreground-muted">
           <p>
             NASA SUITS grades every team on an Education/Community & Industry
-            Engagement Plan. We plan and execute at least four documented
+            Engagement Plan. We plan and execute at least four
             engagement events each year, with at least one education/community
             event and one industry event.
           </p>
