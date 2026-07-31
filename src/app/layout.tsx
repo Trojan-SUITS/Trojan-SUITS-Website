@@ -1,25 +1,38 @@
 import type { Metadata } from "next";
-import { Orbitron, Rajdhani, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Starfield from "@/components/Starfield";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const orbitron = Orbitron({
+// Self-hosted (rather than next/font/google) so the production build doesn't
+// depend on fetching fonts.gstatic.com at build time — that fetch has been
+// flaky/failing on some hosts' build infra with Next.js 16.2.
+const orbitron = localFont({
+  src: [
+    { path: "../fonts/orbitron.woff2", weight: "500", style: "normal" },
+    { path: "../fonts/orbitron.woff2", weight: "700", style: "normal" },
+    { path: "../fonts/orbitron.woff2", weight: "900", style: "normal" },
+  ],
   variable: "--font-orbitron",
-  subsets: ["latin"],
-  weight: ["500", "700", "900"],
+  display: "swap",
 });
 
-const rajdhani = Rajdhani({
+const rajdhani = localFont({
+  src: [
+    { path: "../fonts/rajdhani-500.woff2", weight: "500", style: "normal" },
+    { path: "../fonts/rajdhani-600.woff2", weight: "600", style: "normal" },
+    { path: "../fonts/rajdhani-700.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-rajdhani",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  display: "swap",
 });
 
-const inter = Inter({
+const inter = localFont({
+  src: "../fonts/inter-variable.woff2",
+  weight: "100 900",
   variable: "--font-inter",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
