@@ -5,6 +5,7 @@ import { SiGithub, SiInstagram, SiX } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
 import type { RosterMember } from "@/data/roster";
 import { initials } from "@/lib/initials";
+import { withBasePath } from "@/lib/basePath";
 
 const platformIcons: Record<string, ComponentType<{ className?: string }>> = {
   github: SiGithub,
@@ -23,7 +24,7 @@ export default function RosterOrb({ member }: { member: RosterMember }) {
         <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-space-panel">
           {member.photo ? (
             <Image
-              src={member.photo}
+              src={withBasePath(member.photo)}
               alt={member.name}
               fill
               sizes="112px"

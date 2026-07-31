@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import type { LegacyTeam } from "@/data/legacy";
+import { withBasePath } from "@/lib/basePath";
 
 export default function LegacyTabs({ teams }: { teams: LegacyTeam[] }) {
   const [activeId, setActiveId] = useState(teams[0]?.id);
@@ -39,7 +40,7 @@ export default function LegacyTabs({ teams }: { teams: LegacyTeam[] }) {
           {active.photo && (
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
-                src={active.photo}
+                src={withBasePath(active.photo)}
                 alt={`${active.teamName} press photo`}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
