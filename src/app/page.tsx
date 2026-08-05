@@ -61,7 +61,7 @@ export default function Home() {
           <Eyebrow>What We're Building</Eyebrow>
         </div>
         <div className="space-y-4">
-          <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
+          <p className="text-lg leading-relaxed text-foreground-muted">
             Trojan SUITS is USC's student team for{" "}
             <a
               href={NASA_SUITS_URL}
@@ -75,21 +75,21 @@ export default function Home() {
             design and build mixed-reality interfaces for astronauts during
             spacewalks.
           </p>
-          <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
+          <p className="text-lg leading-relaxed text-foreground-muted">
             We're developing a mixed-reality heads-up display to make it easy
             for an astronaut to monitor telemetry, follow procedures, and
             communicate with robots. Along with coding a user interface, we're researching
             & developing the hardware/infrastructure required to support
             a system like this for space travel. 
           </p>
-          <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
+          <p className="text-lg leading-relaxed text-foreground-muted">
             Prospect teams put forward a design plan & proposal which is
             scored on technical excellence, human-in-the-loop test planning,
             and public outreach. This culminates in a test week where the top
             teams travel to NASA's Johnson Space Center to demo their systems
             in-person to NASA engineers.
           </p>
-          <p className="max-w-3xl text-lg leading-relaxed text-foreground-muted">
+          <p className="text-lg leading-relaxed text-foreground-muted">
             USC fielded a team in 2022 that was selected to participate and
             demo in Houston, Texas. We're reviving that effort and are
             looking for all types of students/advisors to brainstorm ideas for how we can use mixed reality technology to

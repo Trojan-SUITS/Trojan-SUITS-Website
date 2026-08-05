@@ -14,12 +14,12 @@ export type Team = {
 
 export const teams: Team[] = [
   {
-    slug: "hud",
+    slug: "spatial-computing",
     emoji: "🥽",
-    name: "Heads-Up Display (HUD)",
-    tagline: "Builds the AR application on the headset.",
+    name: "Spatial Computing",
+    tagline: "Builds the heads up display for astronauts.",
     description:
-      "Team in charge of developing the HUD system for the astronaut, addressing the main mission of the design challenge.",
+      "Team in charge of developing the HUD system for the astronaut, addressing the main mission of the design challenge, and researches ways for the HUD to communicate with robots.",
     specialties: [
       "Virtual/Augmented/Mixed Reality",
       "Game Development",
